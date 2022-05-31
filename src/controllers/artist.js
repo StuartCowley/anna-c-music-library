@@ -1,5 +1,5 @@
 // artist controller func
-const getDb = require('../src/services/db')
+const getDb = require('../services/db')
 
 exports.create = async (req, res) => {
   const db = await getDb()
