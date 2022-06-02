@@ -13,8 +13,4 @@ app.get('/', (req, res) => {
   res.status(200).json('Hello Big World')
 })
 
-app.get('/about', (req, res) => {
-  res.send('<p>about page</P>')
-})
-
 module.exports = app

@@ -8,8 +8,9 @@ const app = require('../src/app')
 
 describe('create artist', () => {
   let db
+  //  establishing connection to db before each test
   beforeEach(async () => (db = await getDb()))
-
+  // uses db.query to delete all the artists in the Artist table then closes the connection to the database
   afterEach(async () => {
     await db.query('DELETE FROM Artist')
     await db.close()
