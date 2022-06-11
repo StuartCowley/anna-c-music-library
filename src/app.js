@@ -1,13 +1,14 @@
 const express = require('express')
 // imported artistRouter
 const artistRouter = require('./routes/artist')
+const albumRouter = require('./routes/album')
 
 const app = express()
 
 app.use(express.json())
 
-// direct all /artists request to artistController
-app.use('/artist', artistRouter)
+app.use(artistRouter)
+app.use(albumRouter)
 
 app.get('/', (req, res) => {
   res.status(200).json('Hello Big World')
